@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const age = 19;
     const birthdayAudio = new Audio('birthday.mp3');
     birthdayAudio.autoplay = true;
+    birthdayAudio.loop = true;
 
     function getRandomNumber() {
         return Math.floor(Math.random() * 70) + 1;
