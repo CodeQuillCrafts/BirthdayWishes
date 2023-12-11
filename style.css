@@ -9,17 +9,44 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    font-size: 16px;
 }
 
 #root {
-    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100em;
+    flex-wrap: wrap;
+}
+
+#text {
+    z-index: 100;
+    position: fixed;
+    font-size: 5rem;
+    color: green;
     font-weight: bold;
-    color: rgb(27, 220, 210);
-    transition: all .4s ease-in-out;
+}
+
+.balloon {
+    font-size: 4em;
+    position: relative;
+    animation: slideup 2.2s infinite;
+}
+
+@keyframes slideup {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-50vh);
+    }
+
+    100% {
+        transform: translateY(-100vh);
+    }
 }
