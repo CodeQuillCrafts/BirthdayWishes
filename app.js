@@ -14,8 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
             root.style.color = "blue";
         }
     }
-    setTimeout(() => {
-
-        displayAge(0);
-    }, 2000);
+    displayAge(0);
 });
