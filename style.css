@@ -50,3 +50,9 @@ body {
         transform: translateY(-100vh);
     }
 }
+
+@media screen and (max-width:768px) {
+    .balloon {
+        font-size: 2em;
+    }
+}
