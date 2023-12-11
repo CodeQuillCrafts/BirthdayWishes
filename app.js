@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 await playAudio();
             }
         } catch (error) {
-            console.error('Error playing audio:', error);
+            console.error('Error :', error);
         }
     }
 
