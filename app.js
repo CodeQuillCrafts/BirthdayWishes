@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     birthdayAudio.autoplay = true;
 
     function getRandomNumber() {
-        return Math.floor(Math.random() * 50) + 1;
+        return Math.floor(Math.random() * 70) + 1;
     }
 
     function addBalloon() {
