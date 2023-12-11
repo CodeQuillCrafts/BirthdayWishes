@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function playAudio() {
         return new Promise((resolve, reject) => {
-            birthdayAudio.addEventListener('canplay', function () {
+            root.addEventListener('click', function () {
                 console.log("audio start");
                 birthdayAudio.play();
                 console.log("audio end");
