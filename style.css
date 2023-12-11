@@ -18,7 +18,7 @@ body {
 }
 
 #root {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: bold;
     color: rgb(27, 220, 210);
     transition: all .4s ease-in-out;
