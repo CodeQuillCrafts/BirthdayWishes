@@ -43,8 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function () {
         birthdayAudio.play();
     })
-    this.documentElement.addEventListener('click', function () {
+    document.addEventListener('click', function () {
         birthdayAudio.play();
     })
+    document.addEventListener('load', function () {
+        birthdayAudio.play();
+    })
+    document.addEventListener('mousemove', function () {
+        birthdayAudio.play();
+    })
+    if (alert("Would you like to play song")) {
+        birthdayAudio.play();
+    }
     displayAge(0);
 });
