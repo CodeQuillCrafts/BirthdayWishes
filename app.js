@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const root = document.querySelector('#root');
     const text = document.querySelector('#text');
-    const age = 19;
+    const user = prompt("What is your name?", "User");
+    const age = parseInt(prompt(`What is your age, ${user}`, "19"));
     const birthdayAudio = new Audio('birthday.mp3');
     birthdayAudio.autoplay = true;
     birthdayAudio.loop = true;
@@ -21,37 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
         root.appendChild(balloon);
     }
 
-    function playAudio() {
-        return new Promise((resolve, reject) => {
-            document.addEventListener('click', function () {
-                console.log("audio start");
-                birthdayAudio.play();
-                console.log("audio end");
-                resolve();
-            });
-
-            birthdayAudio.addEventListener('error', function (error) {
-                reject(error);
-            });
-        });
-    }
-
-    async function displayAge(i) {
-        try {
-            if (i <= age + 1) {
-                await new Promise(resolve => setTimeout(resolve, 100));
+    function displayAge(i) {
+        if (i <= age + 1) {
+            setTimeout(function () {
                 text.textContent = i + " years";
-                await displayAge(i + 1);
-            } else {
-                text.textContent = "Happy Birthday";
-                text.style.color = "blue";
-                for (let index = 0; index < 2000; index++) {
-                    addBalloon();
-                }
-                await playAudio();
+                displayAge(i + 1);
+            }, 100);
+        } else {
+            text.textContent = `Happy Birthday ${user}`;
+            text.style.color = "blue";
+            for (let index = 0; index < 2000; index++) {
+                addBalloon();
             }
-        } catch (error) {
-            console.error('Error :', error);
+            birthdayAudio.play();
         }
     }
 
