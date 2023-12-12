@@ -34,9 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
             for (let index = 0; index < 2000; index++) {
                 addBalloon();
             }
-            birthdayAudio.play();
         }
     }
 
+    birthdayAudio.addEventListener('canplay', function () {
+        birthdayAudio.play();
+    });
+    document.addEventListener('keydown', function () {
+        birthdayAudio.play();
+    })
     displayAge(0);
 });
