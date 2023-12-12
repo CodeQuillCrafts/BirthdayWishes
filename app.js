@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
     birthdayAudio.loop = true;
 
     function getRandomNumber() {
-        return Math.floor(Math.random() * 70) + 1;
+        return Math.floor(Math.random() * 200) + 1;
     }
 
     function addBalloon() {
         let balloon = document.createElement('div');
         balloon.textContent = '🎈';
         balloon.classList.add('balloon');
-        const randomPadding = getRandomNumber() + 'px';
-        balloon.style.padding = randomPadding;
-        const randomMargin = getRandomNumber() + 'px';
-        balloon.style.margin = randomMargin;
+        balloon.style.paddingTop = getRandomNumber() + 'px';
+        balloon.style.paddingBottom = getRandomNumber() + 'px';
+        balloon.style.marginTop = getRandomNumber() + 'px';
+        balloon.style.marginBottom = getRandomNumber() + 'px';
         root.appendChild(balloon);
     }
 
