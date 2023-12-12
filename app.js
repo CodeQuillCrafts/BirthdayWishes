@@ -52,8 +52,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mousemove', function () {
         birthdayAudio.play();
     })
-    if (alert("Would you like to play song")) {
-        birthdayAudio.play();
-    }
     displayAge(0);
 });
