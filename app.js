@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return Math.floor(Math.random() * 200) + 1;
     }
 
-    function addBalloon() {
+    function addBalloon(sym) {
         let balloon = document.createElement('div');
-        balloon.textContent = '🎈';
+        balloon.textContent = sym;
         balloon.classList.add('balloon');
         balloon.style.paddingTop = getRandomNumber() + 'px';
         balloon.style.paddingBottom = getRandomNumber() + 'px';
@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             text.textContent = `Happy Birthday ${user}`;
             text.style.color = "blue";
-            for (let index = 0; index < 2000; index++) {
-                addBalloon();
+            for (let index = 0; index < 500; index++) {
+                addBalloon('🎈');
+                addBalloon('🎂');
             }
         }
     }
